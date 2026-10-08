@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens — "Warm Paper & Ink"
+ * Warm neutral paper surfaces, warm ink text, one burnt-orange accent.
+ * Neo-brutalist structure (ink borders, hard offset shadows),
+ * neumorphic depth (soft dual-tone shadows on raised surfaces),
+ * restrained glass (navbar / overlays only).
+ */
+@layer base {
+  :root {
+    --background: 36 33% 96%;      /* #faf7f1 warm paper */
+    --foreground: 28 16% 12%;      /* warm ink */
+    --card: 40 40% 99%;            /* lifted paper */
+    --card-foreground: 28 16% 12%;
+    --popover: 40 40% 99%;
+    --popover-foreground: 28 16% 12%;
+    --primary: 18 81% 50%;         /* burnt orange accent */
+    --primary-foreground: 40 40% 98%;
+    --secondary: 38 18% 92%;       /* #efede9 */
+    --secondary-foreground: 28 16% 14%;
+    --muted: 38 16% 91%;
+    --muted-foreground: 33 9% 42%; /* warm taupe */
+    --accent: 18 81% 50%;
+    --accent-foreground: 40 40% 98%;
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 40 40% 98%;
+    --border: 28 16% 12%;          /* ink — brutalist borders */
+    --line: 35 16% 84%;            /* soft divider */
+    --input: 35 16% 84%;
+    --ring: 18 81% 50%;
+    --radius: 0.5rem;
+
+    /* custom tokens */
+    --ink: 28 16% 12%;
+    --ink-soft: 30 10% 26%;
+    --paper: 36 33% 96%;
+    --paper-raised: 40 40% 99%;
+    --paper-sunken: 37 20% 91%;
+    --taupe: 33 9% 42%;
+    --accent-soft: 20 90% 94%;
+    --neu-dark: 34 18% 84%;        /* neumorphic shadow tone */
+    --neu-light: 40 60% 100%;      /* neumorphic highlight tone */
+    --glass: 40 40% 99%;
+    --glass-alpha: 0.72;
+  }
+
+  .dark {
+    --background: 30 15% 7%;       /* warm near-black */
+    --foreground: 40 28% 92%;
+    --card: 30 13% 10.5%;
+    --card-foreground: 40 28% 92%;
+    --popover: 30 13% 10.5%;
+    --popover-foreground: 40 28% 92%;
+    --primary: 20 92% 58%;         /* lifted orange for dark */
+    --primary-foreground: 28 16% 10%;
+    --secondary: 30 10% 16%;
+    --secondary-foreground: 40 24% 88%;
+    --muted: 30 10% 15%;
+    --muted-foreground: 35 10% 60%;/* taupe, kept from light system */
+    --accent: 20 92% 58%;
+    --accent-foreground: 28 16% 10%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 40 40% 98%;
+    --border: 40 26% 90%;          /* paper-toned ink borders in dark */
+    --line: 30 10% 21%;
+    --input: 30 10% 21%;
+    --ring: 20 92% 58%;
+
+    --ink: 40 26% 90%;
+    --ink-soft: 36 12% 70%;
+    --paper: 30 15% 7%;
+    --paper-raised: 30 13% 10.5%;
+    --paper-sunken: 30 12% 5.5%;
+    --taupe: 35 10% 60%;
+    --accent-soft: 20 40% 16%;
+    --neu-dark: 30 20% 3%;
+    --neu-light: 30 12% 16%;
+    --glass: 30 13% 10%;
+    --glass-alpha: 0.66;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01" on, "cv11" on;
+  }
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  :focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* ——— Neo-brutalist primitives ——— */
+  .neo-border {
+    border: 2px solid hsl(var(--border));
+  }
+  .neo-shadow {
+    box-shadow: 6px 6px 0 0 hsl(var(--ink));
+  }
+  .neo-shadow-sm {
+    box-shadow: 3px 3px 0 0 hsl(var(--ink));
+  }
+  .neo-shadow-xs {
+    box-shadow: 2px 2px 0 0 hsl(var(--ink));
+  }
+  .neo-press {
+    transition: transform 140ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 140ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .neo-press:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 0 hsl(var(--ink));
+  }
+  .neo-press:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 0 hsl(var(--ink));
+  }
+  .neo-press-sm:hover {
+    transform: translate(-1.5px, -1.5px);
+    box-shadow: 5px 5px 0 0 hsl(var(--ink));
+  }
+  .neo-press-sm:active {
+    transform: translate(1.5px, 1.5px);
+    box-shadow: 0 0 0 0 hsl(var(--ink));
+  }
+
+  /* ——— Neumorphic raised surface (subtle) ——— */
+  .neu-raised {
+    background: hsl(var(--paper-raised));
+    box-shadow:
+      5px 5px 12px hsl(var(--neu-dark) / 0.55),
+      -4px -4px 10px hsl(var(--neu-light) / 0.9);
+  }
+  .neu-inset {
+    background: hsl(var(--paper-sunken));
+    box-shadow:
+      inset 3px 3px 7px hsl(var(--neu-dark) / 0.5),
+      inset -3px -3px 6px hsl(var(--neu-light) / 0.7);
+  }
+
+  /* ——— Restrained glass ——— */
+  .glass {
+    background: hsl(var(--glass) / var(--glass-alpha));
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  }
+
+  /* ——— Type helpers ——— */
+  .mono-label {
+    @apply font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em];
+  }
+  .display-tight {
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+  }
+
+  /* ——— Motion: staged reveal ——— */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 560ms ease, transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  html[data-motion="reduced"] .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html[data-motion="reduced"] .neo-press,
+  html[data-motion="reduced"] .neo-press-sm {
+    transition: none;
+  }
+  html[data-motion="reduced"] .neo-press:hover,
+  html[data-motion="reduced"] .neo-press-sm:hover {
+    transform: none;
+  }
+
+  /* marquee for proof strip */
+  @keyframes marquee-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    animation: marquee-x 36s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  html[data-motion="reduced"] .marquee-track {
+    animation: none;
+  }
+
+  @keyframes blink-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  .status-dot {
+    animation: blink-dot 2.2s ease-in-out infinite;
+  }
+  html[data-motion="reduced"] .status-dot {
+    animation: none;
+  }
+}

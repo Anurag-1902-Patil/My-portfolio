@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><priority>1.0</priority></url>
+  <url><loc>/about</loc></url>
+  <url><loc>/experience</loc></url>
+  <url><loc>/projects</loc></url>
+  <url><loc>/projects/drivelegal</loc></url>
+  <url><loc>/projects/project-kranti</loc></url>
+  <url><loc>/projects/medisense-ai</loc></url>
+  <url><loc>/projects/it-department-website</loc></url>
+  <url><loc>/skills</loc></url>
+  <url><loc>/proof</loc></url>
+  <url><loc>/updates</loc></url>
+  <url><loc>/achievements</loc></url>
+  <url><loc>/resume</loc></url>
+  <url><loc>/contact</loc></url>
+</urlset>

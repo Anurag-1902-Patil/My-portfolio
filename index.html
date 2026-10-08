@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anurag Patil — AI + Full-Stack Developer, Pune</title>
+    <meta name="description" content="Anurag Patil is an AI + Full-Stack Developer from Pune, India. He builds RAG systems, LLM-powered tools and modern web applications — a serious builder who learns fast and actually ships." />
+    <meta name="author" content="Anurag Patil" />
+    <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14110d" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anurag Patil" />
+    <meta property="og:title" content="Anurag Patil — AI + Full-Stack Developer" />
+    <meta property="og:description" content="Building, learning and exploring at the intersection of AI and full-stack development. Top 21 Finalist — IIT Madras Road Safety AI Hackathon." />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anurag Patil — AI + Full-Stack Developer" />
+    <meta name="twitter:description" content="Building, learning and exploring at the intersection of AI and full-stack development." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Set theme + motion before first paint to avoid flashes.
+      (function () {
+        try {
+          var stored = localStorage.getItem('ap-theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          var motion = localStorage.getItem('ap-motion');
+          var reduced = motion ? motion === 'reduced' : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          document.documentElement.dataset.motion = reduced ? 'reduced' : 'full';
+        } catch (e) { /* no-op */ }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
