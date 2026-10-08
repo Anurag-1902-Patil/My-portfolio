@@ -1,9 +1,5 @@
 import type { Project } from '@/types'
 
-// NOTE: GitHub repository URLs are intentionally limited to the ones Anurag
-// confirms. Add repo / live URLs here as they become public — the UI renders
-// graceful "available on request" states when a link is missing.
-
 export const projects: Project[] = [
   {
     slug: 'drivelegal',
@@ -25,7 +21,8 @@ export const projects: Project[] = [
     ],
     stack: ['Mistral 7B', 'Ollama', 'FAISS', 'LangChain', 'FastAPI', 'Streamlit'],
     links: [
-      { label: 'GitHub', href: 'https://github.com/Anurag-1902-Patil', kind: 'github' },
+      { label: 'GitHub', href: 'https://github.com/sohmh/DriveLegal', kind: 'github' },
+      { label: 'Demo video', href: 'https://www.youtube.com/watch?v=WV1UiILqcWk', kind: 'demo' },
       { label: 'Case Study', href: '/projects/drivelegal', kind: 'case-study' },
     ],
     caseStudy: {
@@ -262,7 +259,9 @@ export const projects: Project[] = [
     ],
     stack: ['Gemini 3 Flash', 'PDF Processing', 'LLM Extraction', 'Health Analytics', 'Data Viz'],
     links: [
-      { label: 'GitHub', href: 'https://github.com/Anurag-1902-Patil', kind: 'github' },
+      { label: 'GitHub', href: 'https://github.com/Anurag-1902-Patil/Code-Blooded', kind: 'github' },
+      { label: 'Live demo', href: 'https://frontendmediasense.vercel.app/', kind: 'live' },
+      { label: 'Demo video', href: 'https://youtu.be/vGGVGf2dBUM?si=C3icm9ojcoVUlDMB', kind: 'demo' },
       { label: 'Case Study', href: '/projects/medisense-ai', kind: 'case-study' },
     ],
     caseStudy: {

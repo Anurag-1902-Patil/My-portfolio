@@ -1,7 +1,7 @@
 import { ArrowDown, ArrowRight, FileDown, Mail } from 'lucide-react'
 import { site } from '@/data/site'
 import { achievements } from '@/data/achievements'
-import { HeroVisual } from '@/components/HeroVisual'
+import { PixelatedCanvas } from '@/components/ui/pixelated-canvas'
 import { NeoButton } from '@/components/NeoButton'
 import { StatusPill } from '@/components/StatusPill'
 import { Reveal } from '@/components/Reveal'
@@ -9,7 +9,7 @@ import { Reveal } from '@/components/Reveal'
 export function Hero() {
   return (
     <section className="relative mx-auto max-w-6xl px-5 pt-6 sm:px-8 lg:pt-10" aria-label="Introduction">
-      {/* asymmetric split: identity left, system visual right */}
+      {/* asymmetric split: identity left, portrait right */}
       <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-6">
         <div className="relative z-10">
           <Reveal>
@@ -67,12 +67,32 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* 3D / fallback visual */}
         <Reveal delay={200} className="relative">
-          <div className="neu-inset relative h-[340px] overflow-hidden rounded-2xl sm:h-[420px] lg:h-[500px]">
-            <HeroVisual />
-            <p className="mono-label pointer-events-none absolute bottom-3 left-3 text-muted-foreground/80">
-              FIG. 01 — FULL-STACK + AI SYSTEM
+          <div className="neo-border neo-shadow relative mx-auto w-full max-w-[360px] overflow-hidden rounded-2xl bg-card p-2">
+            <PixelatedCanvas
+              src="/me.jpeg"
+              width={400}
+              height={720}
+              alt="Portrait of Anurag Patil"
+              cellSize={4}
+              dotScale={0.9}
+              shape="square"
+              backgroundColor="#211b16"
+              dropoutStrength={0.08}
+              interactive
+              distortionStrength={2.5}
+              distortionRadius={130}
+              distortionMode="repel"
+              followSpeed={0.2}
+              jitterStrength={1.5}
+              jitterSpeed={1}
+              sampleAverage
+              responsive
+              objectFit="cover"
+              className="block h-auto w-full rounded-xl"
+            />
+            <p className="mono-label pointer-events-none absolute bottom-5 left-5 rounded-full bg-background/85 px-3 py-1.5 text-foreground backdrop-blur">
+              FIG. 01 — ANURAG PATIL · PUNE, INDIA
             </p>
           </div>
         </Reveal>

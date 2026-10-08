@@ -6,6 +6,7 @@ import { Positioning } from '@/sections/home/Positioning'
 import { ExperiencePreview } from '@/sections/home/ExperiencePreview'
 import { SkillsPreview } from '@/sections/home/SkillsPreview'
 import { AchievementsPreview } from '@/sections/home/AchievementsPreview'
+import { HomeProjects } from '@/sections/home/HomeProjects'
 import { FinalCta } from '@/sections/home/FinalCta'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <ExperiencePreview />
       <SkillsPreview />
       <AchievementsPreview />
+      <HomeProjects />
       <FinalCta />
     </>
   )
