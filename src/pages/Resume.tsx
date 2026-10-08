@@ -32,7 +32,7 @@ export default function Resume() {
     <>
       <Seo
         title="Resume — Anurag Patil"
-        description="Download the resume of Anurag Patil — AI + Full-Stack Developer, Pune. B.Tech IT (2025–2029), Full-Stack Developer Intern at Fit Ez."
+        description="Anurag Patil is a second-year B.Tech Information Technology student at Pune Vidyarthi Griha's College of Engineering and Technology (PVG's COET), Pune, and a Full-Stack Developer Intern at Fit Ez."
       />
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionHeading kicker="RESUME" title="The one-page version" description="Everything on this site, condensed." />

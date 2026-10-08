@@ -12,7 +12,8 @@ const navItems = [
   { to: '/projects', label: 'Projects' },
   { to: '/skills', label: 'Skills' },
   { to: '/proof', label: 'Proof' },
-  { to: '/updates', label: 'Updates' },
+  { to: '/blog', label: 'Blog' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/achievements', label: 'Achievements' },
   { to: '/resume', label: 'Resume' },
   { to: '/contact', label: 'Contact' },
@@ -62,7 +63,7 @@ export function Navbar() {
           <span className="font-display text-base font-bold tracking-tight">Anurag Patil</span>
         </Link>
 
-        <div className="hidden items-center gap-0.5 xl:flex">
+        <div className="hidden items-center gap-0.5 2xl:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -104,7 +105,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="neo-border flex h-9 w-9 items-center justify-center rounded-full bg-card xl:hidden"
+            className="neo-border flex h-9 w-9 items-center justify-center rounded-full bg-card 2xl:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
           >
@@ -115,7 +116,7 @@ export function Navbar() {
 
       {/* Mobile / tablet menu */}
       {open && (
-        <div className="glass neo-border neo-shadow mx-auto mt-2 max-w-6xl rounded-2xl p-3 xl:hidden" role="dialog" aria-label="Menu">
+        <div className="glass neo-border neo-shadow mx-auto mt-2 max-w-6xl rounded-2xl p-3 2xl:hidden" role="dialog" aria-label="Menu">
           <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
             {navItems.map((item) => (
               <li key={item.to}>

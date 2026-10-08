@@ -351,7 +351,7 @@ export const projects: Project[] = [
     tagline:
       'The official website for my college\'s IT department — built independently in React and selected over other student submissions.',
     description:
-      'A React website for the IT department of Pune Vidyarthi College of Engineering: showcasing the department, its members, and its work. Multiple students submitted implementations — mine was selected and deployed live.',
+      "A React website for the IT department at Pune Vidyarthi Griha's College of Engineering and Technology (PVG's COET), Pune. Multiple students submitted implementations — mine was selected and deployed live.",
     achievement: 'Selected over multiple student submissions and deployed as the department\'s live website.',
     tech: [
       { group: 'Frontend', items: ['React', 'JavaScript', 'CSS'] },
@@ -360,6 +360,8 @@ export const projects: Project[] = [
     stack: ['React', 'JavaScript', 'CSS', 'Deployment'],
     links: [
       { label: 'GitHub', href: 'https://github.com/Anurag-1902-Patil', kind: 'github' },
+      { label: 'Live website', href: 'https://itsa-gamma.vercel.app/', kind: 'live' },
+      { label: 'Demo video', href: 'https://youtu.be/n4sSaLqurV0', kind: 'demo' },
       { label: 'Case Study', href: '/projects/it-department-website', kind: 'case-study' },
     ],
     caseStudy: {

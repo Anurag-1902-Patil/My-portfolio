@@ -8,7 +8,8 @@ const footerNav = [
   { to: '/projects', label: 'Projects' },
   { to: '/experience', label: 'Experience' },
   { to: '/proof', label: 'Proof of Work' },
-  { to: '/updates', label: 'Updates' },
+  { to: '/blog', label: 'Blog' },
+  { to: '/gallery', label: 'Gallery' },
   { to: '/resume', label: 'Resume' },
   { to: '/contact', label: 'Contact' },
 ]

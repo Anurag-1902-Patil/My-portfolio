@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Anurag Patil — AI + Full-Stack Developer, Pune"
-        description="Anurag Patil builds RAG systems, LLM-powered tools and modern web apps. Top 21 Finalist at IIT Madras Road Safety AI Hackathon. Full-Stack Developer Intern at Fit Ez."
+        title="Anurag Patil - B.Tech IT Student & Developer, Pune"
+        description="Anurag Patil is a second-year B.Tech Information Technology student at Pune Vidyarthi Griha's College of Engineering and Technology (PVG's COET), Pune. Learning through AI and full-stack projects; currently a Full-Stack Developer Intern at Fit Ez."
       />
       <Hero />
       <ProofStrip />

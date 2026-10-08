@@ -57,11 +57,11 @@ export function Hero() {
             <dl className="mt-10 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-2">
               <div className="neu-raised rounded-xl px-4 py-3">
                 <dt className="mono-label text-muted-foreground">Currently building</dt>
-                <dd className="mt-1.5 text-sm font-medium leading-snug">Project Kranti — real-time progress tracking for infrastructure</dd>
+                <dd className="mt-1.5 text-sm font-medium leading-snug">{site.currentlyBuilding}</dd>
               </div>
               <div className="neu-raised rounded-xl px-4 py-3">
                 <dt className="mono-label text-muted-foreground">Currently exploring</dt>
-                <dd className="mt-1.5 text-sm font-medium leading-snug">RAG pipelines, local LLM inference, vector search</dd>
+                <dd className="mt-1.5 text-sm font-medium leading-snug">{site.currentlyExploring}</dd>
               </div>
             </dl>
           </Reveal>
@@ -97,8 +97,9 @@ export function Hero() {
 
       {/* credibility indicators */}
       <Reveal delay={120}>
-        <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4" aria-label="Credibility highlights">
+        <ul className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-5" aria-label="Credibility highlights">
           {[
+            { k: '2nd Year', v: 'B.Tech Information Technology' },
             { k: 'Top 21', v: 'IIT Madras AI Hackathon' },
             { k: '1st Place', v: 'National Ignition Hackathon' },
             { k: '4×', v: 'National hackathon finalist' },

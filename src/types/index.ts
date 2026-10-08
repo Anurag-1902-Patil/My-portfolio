@@ -87,10 +87,23 @@ export interface SocialLink {
   copyValue?: string
 }
 
-export interface UpdateEntry {
+export interface BlogPost {
   id: string
   date: string
-  kind: 'BUILDING' | 'LEARNING' | 'HACKATHON' | 'SHIPPED' | 'OSS' | 'LIFE'
   title: string
-  body: string
+  excerpt: string
+  body: string[]
+  tags: string[]
+}
+
+export interface GalleryItem {
+  id: string
+  title: string
+  event: string
+  date: string
+  caption: string
+  type: 'image' | 'video'
+  src: string
+  alt: string
+  poster?: string
 }

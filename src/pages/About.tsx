@@ -14,8 +14,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About — Anurag Patil"
-        description="I'm a second-year B.Tech Information Technology student who enjoys building software to solve real problems."
+        title="About - Anurag Patil"
+        description={`Second-year B.Tech in Information Technology student at ${site.education.school}.`}
       />
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
@@ -28,8 +28,8 @@ export default function About() {
           <div className="neo-border neo-shadow rounded-2xl bg-card p-6 sm:p-9">
             <div className="max-w-3xl space-y-5 text-base leading-relaxed text-foreground/85">
               <p>
-                I'm a second-year B.Tech Information Technology student who enjoys building software to solve real
-                problems.
+                I'm currently in my second year of a B.Tech in Information Technology at{' '}
+                {site.education.school}. I enjoy learning by building software that solves practical problems.
               </p>
               <p>
                 I spend most of my time learning by building. Over the past year, that has taken me from web

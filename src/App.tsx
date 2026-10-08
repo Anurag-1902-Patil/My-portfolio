@@ -10,7 +10,8 @@ const Projects = lazy(() => import('@/pages/Projects'))
 const CaseStudy = lazy(() => import('@/pages/CaseStudy'))
 const Skills = lazy(() => import('@/pages/Skills'))
 const Proof = lazy(() => import('@/pages/Proof'))
-const Updates = lazy(() => import('@/pages/Updates'))
+const Blog = lazy(() => import('@/pages/Blog'))
+const Gallery = lazy(() => import('@/pages/Gallery'))
 const Achievements = lazy(() => import('@/pages/Achievements'))
 const Resume = lazy(() => import('@/pages/Resume'))
 const Contact = lazy(() => import('@/pages/Contact'))
@@ -80,10 +81,18 @@ export default function App() {
           }
         />
         <Route
-          path="/updates"
+          path="/blog"
           element={
             <Suspense fallback={<PageFallback />}>
-              <Updates />
+              <Blog />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <Suspense fallback={<PageFallback />}>
+              <Gallery />
             </Suspense>
           }
         />
