@@ -75,10 +75,10 @@ export function Hero() {
               height={720}
               alt="Portrait of Anurag Patil"
               cellSize={4}
-              dotScale={0.9}
+              dotScale={1}
               shape="square"
               backgroundColor="#211b16"
-              dropoutStrength={0.08}
+              dropoutStrength={0}
               interactive
               distortionStrength={2.5}
               distortionRadius={130}
