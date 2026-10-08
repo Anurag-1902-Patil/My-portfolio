@@ -74,7 +74,7 @@ export function Hero() {
               width={400}
               height={720}
               alt="Portrait of Anurag Patil"
-              cellSize={4}
+              cellSize={2}
               dotScale={1}
               shape="square"
               backgroundColor="#211b16"
@@ -91,9 +91,6 @@ export function Hero() {
               objectFit="cover"
               className="block h-auto w-full rounded-xl"
             />
-            <p className="mono-label pointer-events-none absolute bottom-5 left-5 rounded-full bg-background/85 px-3 py-1.5 text-foreground backdrop-blur">
-              FIG. 01 — ANURAG PATIL · PUNE, INDIA
-            </p>
           </div>
         </Reveal>
       </div>
